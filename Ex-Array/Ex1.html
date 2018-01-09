@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Array-Ex1</title>
+</head>
+
+<body>
+  <script>
+    // ------------------ Ex1
+    let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let addition = 0;
+
+    number.forEach(function(item) {
+      addition += item;
+    });
+
+    console.log(addition);
+    //--------------------- Ex 2
+    let actor = ["Dicaprio", "Dujardin", "Poelvoorde"];
+
+    for (let i = 0; i < actor.length; i++) {
+      console.log("Le numéro " + (i + 1) + " est " + actor[i]);
+    }
+
+    //--------BONUS
+    let num = ["premier", "deuxième", "troisième"];
+    for (let i = 0; i < actor.length; i++) {
+      console.log("Le " + num[i] + " est " + actor[i]);
+    }
+
+
+    //-----------------Ex3
+
+    let character = ["Mario", "Luigi", "Peach"];
+    let characterbis = character.slice();
+    characterbis.push("Bowser");
+    console.log(character);
+    console.log(characterbis);
+  </script>
+
+</body>
+
+</html>
