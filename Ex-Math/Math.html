@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Maths</title>
+</head>
+
+<body>
+  <script>
+    // Ex1-----------------------------
+    console.log(Math.min(7, 5, -12, 6, 32, 18, 14, -2));
+    console.log(Math.max(-3, 9, 21, 36, 27, 54, 17, 35));
+    let result = Math.min(7, 5, -12, 6, 32, 18, 14, -2) + Math.max(-3, 9, 21, 36, 27, 54, 17, 35);
+    console.log(result);
+
+    //Ex2------------------------------
+    let floatBateau = 10.4;
+    let couleBateau = Math.floor(floatBateau);
+    let voleBateau = Math.ceil(floatBateau);
+    console.log(couleBateau);
+    console.log(voleBateau);
+
+    //Ex3 ------------------------------
+    console.log(Math.random() * 50 + 50);
+    console.log(Math.round(Math.random()));
+    console.log(Math.floor(Math.random() * 11));
+
+    //Ex4--------------------------------------
+    let name = ["Goro", "Johnny Cago", "Kano", "Liu Kano", "Raiden", "Reptil", "Scorpion", "Shang Tsun", "Sonya", "Sub-Zero"]
+    let i = Math.floor(Math.random() * name.length);
+    console.log(name[i]);
+  </script>
+</body>
+
+</html>
