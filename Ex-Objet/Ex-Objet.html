@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Object</title>
+</head>
+
+<body>
+
+  <script>
+    //Ex1-----------------------------
+    let Character = {
+      name: "Max",
+      age: 26,
+      itemsToGive: ["Hache", "Dagues", "Epée"],
+      giveItem: function() {
+        let randomItem = this.itemsToGive[Math.floor(Math.random() * this.itemsToGive.length)];
+        console.log("Vous recevez " + randomItem); //correction
+      }
+    }
+    for (let key in Character) {
+      console.log(Character[key]);
+    }
+    /*  let giveItem = function() {
+        let itemsToGive = ["Hache", "Dagues", "Epée"];
+        let randomItem = itemsToGive[Math.floor(Math.random() * itemsToGive.length)];
+        console.log("Vous recevez " + randomItem);
+      }; */
+    Character.giveItem()
+
+    //Ex2--------------------------
+
+    //déclare array shop avec objet dedans
+    let shop = [{
+        title: "Epée",
+        physic: 48,
+        magic: 12,
+        minLevel: 3,
+        available: false,
+      },
+      {
+        title: "Baton",
+        physic: 15,
+        magic: 58,
+        minLevel: 10,
+        available: true,
+      },
+      {
+        title: "Hache",
+        physic: 57,
+        magic: 10,
+        minLevel: 2,
+        available: true,
+      },
+    ]
+
+    //Crée fct qui montre les objets du shop
+    let objet = function() {
+      for (let i = 0; i < shop.length; i++) {
+        console.log("Voici ce que je vend: " + (shop[i]["title"]));
+      }
+    }
+
+    objet();
+
+    //Crée fct qui montre objet dispo
+    let objetDispo = function() {
+      for (let i = 0; i < shop.length; i++) {
+        if (shop[i].available == true) {
+          console.log("Cet objet est disponnible: " + (shop[i]["title"]));
+        }
+      }
+    }
+    objetDispo()
+
+    //Crée fonction qui montre objet pour niveau >10
+    let objetLvl = function() {
+      for (let i = 0; i < shop.length; i++) {
+        if (shop[i].minLevel < 10) {
+          console.log("Cet objet est disponnible pour les levels inférieurs à 10: " + (shop[i]["title"]));
+        }
+      }
+    }
+    objetLvl()
+    //Ex3-----------------
+    let mainCharacter = {
+      name: "Max",
+      level: 16,
+      life: 100,
+      weapon: {
+        name: "Epée de la Mort qui tue",
+        damage: 368,
+      },
+      attack: function() {
+        return this.name + " attaque avec l'arme " + this.weapon.name + " les dégâts de sont " + (this.level * this.weapon.damage) + "."
+      }
+    }
+    console.log(mainCharacter.attack())
+
+    //Ex BONUS--------------------
+  </script>
+</body>
+
+</html>
