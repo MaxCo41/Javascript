@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Loops</title>
+</head>
+
+<body>
+  <script>
+    //Ex1-------------------------
+    for (var i = 0; i < 21; i++) {
+      if (i % 2 == 0) {
+        console.log(i + " est pair.");
+      } else {
+        console.log(i + " est impair");
+      }
+    }
+
+    //Ex2--------------------------
+    for (var i = 0; i < 11; i++) {
+      let nbr = (i * 9);
+      console.log(nbr);
+    }
+
+    //Ex3--------------------------
+    let grade = () => {
+      if (i > 90) {
+        console.log("Pour " + i + " points vous avez le grade A");
+      } else if (i > 80) {
+        console.log("Pour " + i + " points vous avez le grade B");
+      } else if (i > 70) {
+        console.log("Pour " + i + " points vous avez le grade C");
+      } else if (i > 65) {
+        console.log("Pour " + i + " points vous avez le grade D");
+      } else {
+        console.log("Pour " + i + " points vous avez le grade F");
+      }
+    }
+    for (var i = 0; i < 101; i++) {
+      grade();
+    }
+
+    //Ex4---------------------------------
+    let stars = "";
+
+    for (var i = 0; i < 5; i++) {
+      stars = stars + "*";
+      console.log(stars);
+    }
+  </script>
+</body>
+
+</html>
