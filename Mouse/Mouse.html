@@ -16,9 +16,38 @@
   <div class="hoverMe">
     <p>Je suis la troisième div</p>
   </div>
+  <div id="reset">RESET</div>
+
+  <div id="axe-x"></div>
+  <div id="axe-y"></div>
+
 
   <script>
     let hoverMe = document.getElementsByClassName("hoverMe");
+    for (var i = 0; i < hoverMe.length; i++) { //loop qui fait disparaitre div une à une quand souris passe desssus.
+      hoverMe[i].addEventListener("mouseover", function() {
+        this.style.visibility = "hidden";
+      })
+    }
+    //ex2------- faire réaparaitre div quand click responseText
+
+    let reaparaitre = document.getElementById("reset");
+    reaparaitre.addEventListener("click", function() {
+      for (var i = 0; i < hoverMe.length; i++) {
+        hoverMe[i].style.visibility = "visible";
+      }
+    });
+
+    //Ex 3--------- montre position de la souris dans les divs
+    let axeX = document.getElementById("axe-x");
+    let axeY = document.getElementById("axe-y");
+
+    document.addEventListener("mousemove", function(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+      axeX.innerText = x;
+      axeY.innerText = y;
+    })
   </script>
 </body>
 

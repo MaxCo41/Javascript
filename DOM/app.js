@@ -2,34 +2,31 @@
 //Ex 1--------------------
 
 
-var corps = document.querySelector("body");
-corps.classList.remove("bg-aqua");
-corps.classList.add("bg-olive");
+var corps = document.querySelector("body");//sélectionne le body
+corps.classList.remove("bg-aqua");//retire classe "aqua" au body
+corps.classList.add("bg-olive");//ajoute le classe "bg-olive" au body
 
+var firstParagraph = document.querySelector("#first-paragraph")//selection ID firstParagraph
+firstParagraph.classList.remove('bg-lime', "gray");// lui retire la classe bg-lime bg gray
+firstParagraph.classList.add("aqua");//lui rajoute la classe "aqua"
 
-
-
-var firstParagraph = document.querySelector("#first-paragraph")
-firstParagraph.classList.remove('bg-lime', "gray");
-firstParagraph.classList.add("aqua");
-
-var silver = document.querySelectorAll(".bg-silver");
+var silver = document.querySelectorAll(".bg-silver");//selectionne tout les éléments avec la classe bg-silver
 silver.forEach (function(item){
-  item.classList.replace("bg-silver", "bg-teal");
+  item.classList.replace("bg-silver", "bg-teal");// remplace la classe bg-silver par bg-teal
 });
 
-var blockquote = document.querySelectorAll ("blockquote");
+var blockquote = document.querySelectorAll ("blockquote");//selectionne blockquote
 blockquote.forEach (function(item){
-  item.classList.add("bg-white");
+  item.classList.add("bg-white");// ajoute la classe white
 });
 
 //Ex2---------------------
-let table = document.querySelector("#my-table");
-table.classList.add("bg-purple");
+let table = document.querySelector("#my-table");  // selectionne l'id my-table
+table.classList.add("bg-purple");// lui ajoute la classe bg-purple
 
-let container = document.querySelectorAll(".container p");
+let container = document.querySelectorAll(".container p");//selection tout les "p" ds container
 container.forEach (function (item) {
-  item.classList.add("shadow");
+  item.classList.add("shadow");// leur ajoute la classe shadow
 });
 
 //Ex3------------
