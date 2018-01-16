@@ -68,4 +68,4 @@ for (var i = 0; i < codes.length; i++) {
 let newLi = document.createElement ("li");
 newLi.innerText = codes[i];
 liste2.appendChild (newLi);
-}
+};
