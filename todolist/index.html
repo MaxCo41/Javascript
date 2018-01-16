@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Todolist</title>
+  <style>
+    .done {
+      text-decoration: line-trough;
+      background: grey;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>To do list</h1>
+    <input type="text" placeholder="add" id="proposition">
+    <input type="submit" id="button">
+    <ul>
+      <li>Feed cat</li>
+      <li>Buy eggs</li>
+      <li>Take shower</li>
+    </ul>
+  </div>
+
+  <script>
+    let button = document.getElementById("button");
+    button.addEventListener("click", function(event) {
+      let proposition = document.getElementById("proposition").value;
+      let newElement = document.createElement("li");
+      newElement.innerText = proposition;
+      document.getElementsByTagName("ul")[0].appendChild(newElement);
+    })
+
+    let lis = document.querySelectorAll("li");
+    console.log(lis);
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].addEventListener("click", function(event) {
+        this.classList.add("done");
+      })
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
