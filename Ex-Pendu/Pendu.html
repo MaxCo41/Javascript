@@ -15,16 +15,19 @@
     //fonction itérer les lettres
 
     let guessLetter = function() {
+      let userInput = prompt("Taper une lettre pour deviner le mot de 7 lettres");
       for (let i = 0; i < letter.length; i++) {
-        let userInput = prompt("Taper une lettre pour deviner le mot de 7 lettres");
-        if (userInput == letter[i]) {
+        if (userInput.toUpperCase() == letter[i]) {
           console.log("Bonne lettre");
           letterGuess[i] = userInput;
-        } else if (userInput != letter[i]) {
+          console.log(letterGuess);
+
+        } else if (userInput.toUpperCase() != letter[i]) {
           console.log("Mauvaise lettre");
         }
       }
     }
+
     console.log("Bravo vous avez trouvez le mot " + letterGuess);
     guessLetter()
   </script>

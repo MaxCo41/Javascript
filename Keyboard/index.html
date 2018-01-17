@@ -4,10 +4,123 @@
 <head>
   <meta charset="utf-8">
   <title>KeyBoard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div id="character">
+    <h1>Ex1</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+
+  <h1>Ex2</h1>
+  <div id="up">Key Up</div>
+  <div id="right">Key Right</div>
+  <div id="down">Key Down</div>
+  <div id="left">Key Left</div>
+
   <script type="text/javascript">
+    let corps = document.body;
+    corps.addEventListener('keypress', function(event) {
+      console.log(event);
+    });
+
+
+    //Ex1-----------------------------------------------
+
+    let divInColor = document.getElementById("character");
+
+    let changeColor = function(event) {
+      switch (event.keyCode) {
+        case 48:
+          divInColor.style.backgroundColor = "red";
+          break;
+
+        case 49:
+          divInColor.style.backgroundColor = 'yellow';
+          break;
+
+        case 50:
+          divInColor.style.backgroundColor = 'blue';
+          break;
+
+        case 51:
+          divInColor.style.backgroundColor = 'orange';
+          break;
+
+        case 52:
+          divInColor.style.backgroundColor = 'purple';
+          break;
+
+        case 53:
+          divInColor.style.backgroundColor = 'pink';
+          break;
+
+        case 54:
+          divInColor.style.backgroundColor = 'cyan';
+          break;
+
+        case 55:
+          divInColor.style.backgroundColor = 'lightgrey';
+          break;
+
+        case 56:
+          divInColor.style.backgroundColor = 'grey';
+          break;
+
+      };
+    };
+
+    document.addEventListener('keypress', changeColor);
+    //Ex 2-------------
+    let keyUp = document.getElementById("up");
+    let keyR = document.getElementById("right");
+    let keyDown = document.getElementById("down");
+    let keyL = document.getElementById("left");
+
+    let changeOpacity = function(event) {
+      switch (event.keyCode) {
+        case 38:
+          keyUp.classList.add("highlight");
+          break;
+
+        case 40:
+          keyDown.classList.add("highlight");
+          break;
+
+        case 37:
+          keyL.classList.add("highlight");
+          break;
+
+        case 39:
+          keyR.classList.add("highlight");
+          break;
+
+      };
+    };
+
+    let removeOpacity = function(event) {
+      switch (event.keyCode) {
+        case 38:
+          keyUp.classList.remove("highlight");
+          break;
+
+        case 40:
+          keyDown.classList.remove("highlight");
+          break;
+
+        case 37:
+          keyL.classList.remove("highlight");
+          break;
+
+        case 39:
+          keyR.classList.remove("highlight");
+          break;
+
+      }
+    }
+    document.addEventListener('keydown', changeOpacity);
+    document.addEventListener("keyup", removeOpacity);
   </script>
 </body>
 
